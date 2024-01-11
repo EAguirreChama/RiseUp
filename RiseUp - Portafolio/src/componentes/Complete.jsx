@@ -1,4 +1,4 @@
-export default function Nav() {
+export default function Complete() {
   return (
     <span className="bg-black flex flex-col pb-12">
       <div className="bg-zinc-950 self-stretch flex w-full items-stretch justify-between gap-5 pl-12 pr-20 py-2.5 max-md:max-w-full max-md:flex-wrap max-md:px-5">
