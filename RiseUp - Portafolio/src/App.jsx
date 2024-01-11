@@ -1,7 +1,9 @@
+import Nav from "./componentes/Nav"
+
 export default function App () {
   return (
     <div>
-      <h1>Hola Gays</h1>
+      <Nav/>
     </div>
   )
 }
