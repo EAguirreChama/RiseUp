@@ -4,10 +4,10 @@ export default function Preguntas() {
                 <div className="justify-center text-white text-center text-5xl bg-zinc-950 pt-2 pb-3">
                     ¿Por qué <span className="font-medium">RiseUp</span>?
                 </div>
-                <div className="self-stretch mt-12">
-                    <div className="gap-5 flex max-md:flex-col">
-                        <div className="flex flex-col items-stretch w-[64%] max-md:w-full max-md:ml-0">
-                            <div className="justify-center text-white text-opacity-70 text-4xl leading-[60px] my-auto">
+                <div className="mt-12">
+                    <div className="gap-5 flex">
+                        <div className="flex flex-col items-stretch w-[64%]">
+                            <div className="justify-center text-white text-opacity-70 text-3xl leading-[60px] my-auto">
                                 En <span className="text-white">RiseUp</span> fusionamos la
                                 creatividad del diseño con la excelencia en el desarrollo web
                                 para ofrecer soluciones digitales que no solo son visualmente
