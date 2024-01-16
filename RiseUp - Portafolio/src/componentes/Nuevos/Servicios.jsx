@@ -1,6 +1,6 @@
 import Tarjeta from "./TarjetaServicio"
 
-export default function Servicios2() {
+export default function Servicios() {
 
     const TarjetaData = [
         { nombre: 'Asistentes de IA Personalizados', imagen: '../../public/iconos svg/ia.svg' },
@@ -14,8 +14,9 @@ export default function Servicios2() {
 
     return (
         // Contenedor
-        <div className="">
-            <div className="justify-center text-white text-center text-5xl font-medium mt-5">
+        <div className="flex flex-col items-center mt-10">
+            <div className="bg-zinc-300 w-[960px] h-0.5"/>
+            <div className="justify-center text-white text-center text-5xl font-medium my-10">
                 Servicios que ofrecemos
             </div>
             <div className="flex flex-wrap justify-center gap-10 mt-5">
