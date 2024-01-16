@@ -1,8 +1,8 @@
 // eslint-disable-next-line react/prop-types
 export default function Tarjeta({ nombre, imagen }) {
     return (
-        <div className="flex flex-col w-3/12">
-            <span className="flex grow flex-col items-center w-full px-8 py-10 rounded-[37px] border-4 border-solid border-white border-opacity-60">
+        <div className="flex flex-col w-3/12 transform transition-transform duration-300 ease-in-out hover:scale-105">
+            <span className="flex grow flex-col items-center w-full px-8 py-10 rounded-[37px] border-4 border-solid border-white border-opacity-60 hover:border-white hover:scale-110">
                 <img
                     src={imagen}
                     className="aspect-[0.99] object-contain object-center w-[80px]"

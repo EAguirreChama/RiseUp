@@ -1,7 +1,6 @@
 export default function Principal() {
   return (
-    <div className="items-center flex-col relative flex">
-
+    <div id="inicio" className="items-center flex-col relative flex">
       <img
         src="../../public/fondos/hombre-usando-tecnologia-inteligente-maqueta-psd-tableta-digital.jpg"
         className="absolute h-full w-full"
