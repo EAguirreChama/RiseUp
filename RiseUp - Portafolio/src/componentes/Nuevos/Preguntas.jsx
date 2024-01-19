@@ -1,7 +1,7 @@
 export default function Preguntas() {
     return (
         // Contenedor Total
-        <div className="flex flex-col items-center mt-10">
+        <div className="flex flex-col items-center mt-10" id="quienesSomos">
             <div className="bg-zinc-300 w-[960px] h-0.5"/>
             {/* Contenedor 1 */}
             <div>

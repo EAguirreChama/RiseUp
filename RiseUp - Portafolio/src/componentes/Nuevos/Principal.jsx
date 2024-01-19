@@ -22,3 +22,14 @@ export default function Principal() {
     </div>
   )
 }
+
+
+
+
+
+            {/* <div className="text-5xl text-center text-white">
+                ¿Necesitas elevar tu <br /> Presencia?
+            </div>
+            <div className="text-2xl text-center mt-12 text-white">
+            Contanos sobre tu proyecto, para <br /> poder brindarte el mejor <br /> asesoramiento.
+            </div> */}

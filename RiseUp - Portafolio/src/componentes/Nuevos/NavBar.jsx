@@ -16,9 +16,9 @@ export default function NavBar() {
             {isHome ? 'Contacto' : 'Home'}
           </button>
         </Link>
-        <button className="text-white text-2xl ml-2 cursor-pointer hover:text-yellow-300">
-          ¿Quiénes somos?
-        </button>
+        <a href="#quienesSomos" className="text-white text-2xl ml-2 cursor-pointer hover:text-yellow-300 mt-5">
+            ¿Quiénes somos?
+        </a>
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
 import Landing from "./Landing";
-import Formulario from "./formulario";
+import FormularioContacto from "./FormularioContacto";
 
-export { Landing, Formulario }
+export { Landing, FormularioContacto }
