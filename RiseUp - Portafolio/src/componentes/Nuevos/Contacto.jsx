@@ -1,11 +1,15 @@
+import { Link } from "react-router-dom"
+
 export default function Contacto() {
     return (
         <div className="flex flex-col items-center mt-10">
             <div className="bg-zinc-300 w-[960px] h-0.5" />
             <h1 className="font-medium text-white text-center text-6xl my-16">¿Necesitas elevar tu <br /> presencia?</h1>
-            <button className="text-white bg-green-600 px-16 py-6 w-[550px] rounded-3xl text-4xl font-medium mb-6">
-                Contactanos
-            </button>
+            <Link to="/formulario">
+                <button className="text-white bg-green-600 px-16 py-6 w-[550px] rounded-3xl text-4xl font-medium mb-6">
+                    Contactanos
+                </button>
+            </Link>
             <div className="flex w-[220px] gap-5 px-5 my-2">
                 <img src="../../public/iconos svg/instagram (3).svg" className="overflow-hidden flex-1 cursor-pointer" />
                 <img src="../../public/iconos svg/linkedin.svg" className="overflow-hidden flex-1 cursor-pointer" />
