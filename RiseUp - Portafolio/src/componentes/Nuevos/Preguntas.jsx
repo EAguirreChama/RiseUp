@@ -1,7 +1,7 @@
 export default function Preguntas() {
     return (
       <div className="flex flex-col items-center mt-10" id="quienesSomos">
-        <div className="bg-zinc-300 w-[960px] h-0.5" />
+        <div className="bg-zinc-300 w-full h-0.5" />
         <div>
           <h1 className="justify-center text-white text-center text-3xl md:text-5xl pt-2 pb-3 mt-5">
             ¿Por qué <span className="font-medium">RiseUp</span>?
