@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 export default function NavBar() {
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const isFormulario = location.pathname === "/formulario";
 
   const [menuVisible, setMenuVisible] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
@@ -52,18 +53,30 @@ export default function NavBar() {
           </button>
         )}
         <div className={`md:flex md:items-end md:gap-5 md:p-0 ${menuVisible ? 'p-5 flex flex-col' : 'hidden'}`}>
-          <Link
-            to={isHome ? "/formulario" : "/"}
-            className="text-white text-2xl cursor-pointer hover:text-yellow-300"
-          >
-            {isHome ? 'Contacto' : 'Home'}
-          </Link>
-          <a
-            href="#quienesSomos"
-            className="text-white text-2xl cursor-pointer hover:text-yellow-300"
-          >
-            ¿Quiénes somos?
-          </a>
+          {isHome && (
+            <>
+              <Link
+                to="/formulario"
+                className="text-white text-2xl cursor-pointer hover:text-yellow-300"
+              >
+                Contacto
+              </Link>
+              <a
+                href="#quienesSomos"
+                className="text-white text-2xl cursor-pointer hover:text-yellow-300"
+              >
+                ¿Quiénes somos?
+              </a>
+            </>
+          )}
+          {isFormulario && (
+            <Link
+              to="/"
+              className="text-white text-2xl cursor-pointer hover:text-yellow-300"
+            >
+              Home
+            </Link>
+          )}
         </div>
       </div>
     </div>
