@@ -2,13 +2,13 @@ export default function Principal() {
   return (
     <div id="inicio" className="items-center flex-col relative flex">
       <img
-        src="../../public/fondos/hombre-usando-tecnologia-inteligente-maqueta-psd-tableta-digital.jpg"
+        src="fondos/hombre-usando-tecnologia-inteligente-maqueta-psd-tableta-digital.jpg"
         className="absolute h-full w-full object-cover"
       />
 
       <div className="relative flex w-full max-w-screen-lg flex-col mt-10 mb-20 mx-auto">
         <img
-          src="../../public/logo Riseup/logo png.png"
+          src="logo Riseup/logo png.png"
           className="aspect-[4] object-contain self-center"
         />
         <div className="justify-center text-white text-center text-3xl md:text-5xl lg:text-5xl font-medium">

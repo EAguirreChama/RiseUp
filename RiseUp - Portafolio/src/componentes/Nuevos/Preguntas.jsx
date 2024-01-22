@@ -14,7 +14,7 @@ export default function Preguntas() {
               Somos un equipo apasionado de diseñadores y desarrolladores que trabajan juntos para dar vida a tus ideas y destacar tu presencia en línea.
             </div>
             <img
-              src="../../public/letras con fondo/up2.png"
+              src="letras con fondo/up2.png"
               className="object-contain object-center overflow-x-auto grow w-full md:w-2/5 hidden md:block"
             />
           </div>
@@ -25,7 +25,7 @@ export default function Preguntas() {
           </h1>
           <div className="flex flex-col md:flex-row m-5 gap-1 items-center md:items-start">
             <img
-              src="../../public/letras con fondo/rise.png"
+              src="letras con fondo/rise.png"
               className="object-contain object-center overflow-x-auto grow w-full md:w-2/5 hidden md:block"
             />
             <div className="w-full md:w-3/5 text-white text-lg md:text-4xl text-opacity-70 text-center md:text-right">
