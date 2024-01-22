@@ -36,7 +36,7 @@ export default function Preguntas() {
                         src="../../public/letras con fondo/rise.png"
                         className="object-contain object-center overflow-x-auto grow w-[50%]"
                     />
-                    <div className="w-[100%] text-white text-4xl  text-opacity-70 text-right">
+                    <div className="w-[100%] text-white text-4xl text-opacity-70 text-right">
                         Somos un equipo de mentes apasionadas y colaborativas, unidas por
                         un propósito común
                         <br />
