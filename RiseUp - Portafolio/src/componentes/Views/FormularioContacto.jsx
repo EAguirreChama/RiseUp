@@ -59,13 +59,13 @@ export default function FormularioContacto() {
                 if (response.ok) {
                     console.log('Correo enviado con éxito');
                     setMensaje('Correo enviado correctamente')
-                    // setFormData({
-                    //     nombre: '',
-                    //     nombreEmpresa: '',
-                    //     telefono: '',
-                    //     email: '',
-                    //     descripcion: '',
-                    // })
+                    setFormData({
+                        nombre: '',
+                        nombreEmpresa: '',
+                        telefono: '',
+                        email: '',
+                        descripcion: '',
+                    })
                 } else {
                     setMensaje('Error al enviar el correo')
                     console.error('Error al enviar el correo');
@@ -79,7 +79,7 @@ export default function FormularioContacto() {
 
     setTimeout(() => {
         setMensaje('')
-    }, 3000)
+    }, 2000)
 
     return (
         <div className="flex flex-col items-center mt-5">
