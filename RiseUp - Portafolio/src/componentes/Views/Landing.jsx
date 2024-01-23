@@ -1,7 +1,7 @@
-import Contacto from "../Nuevos/Contacto";
-import Preguntas from "../Nuevos/Preguntas";
-import Principal from "../Nuevos/Principal";
-import Servicios from "../Nuevos/Servicios";
+import Contacto from "../Nuevos/Contacto"
+import Preguntas from "../Nuevos/Preguntas"
+import Principal from "../Nuevos/Principal"
+import Servicios from "../Nuevos/Servicios"
 
 export default function Landing() {
     return (

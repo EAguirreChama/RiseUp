@@ -1,29 +1,29 @@
-import { Link, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom"
+import { useState, useEffect } from "react"
 
 export default function NavBar() {
-  const location = useLocation();
-  const isHome = location.pathname === "/";
-  const isFormulario = location.pathname === "/formulario";
+  const location = useLocation()
+  const isHome = location.pathname === "/"
+  const isFormulario = location.pathname === "/formulario"
 
-  const [menuVisible, setMenuVisible] = useState(false);
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
+  const [menuVisible, setMenuVisible] = useState(false)
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768)
 
   const toggleMenu = () => {
-    setMenuVisible(!menuVisible);
-  };
+    setMenuVisible(!menuVisible)
+  }
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768);
-    };
+      setIsSmallScreen(window.innerWidth <= 768)
+    }
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize)
 
     return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
 
   return (
     <div className="bg-zinc-950 flex justify-between pr-5">
@@ -80,5 +80,5 @@ export default function NavBar() {
         </div>
       </div>
     </div>
-  );
+  )
 }

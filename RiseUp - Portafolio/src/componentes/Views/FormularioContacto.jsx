@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 export default function FormularioContacto() {
     const [formData, setFormData] = useState({
@@ -7,9 +7,9 @@ export default function FormularioContacto() {
         telefono: '',
         email: '',
         descripcion: '',
-    });
+    })
 
-    const [errors, setErrors] = useState({});
+    const [errors, setErrors] = useState({})
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -18,7 +18,7 @@ export default function FormularioContacto() {
         }
         setFormData({ ...formData, [name]: value });
         setErrors({ ...errors, [name]: '' });
-    };
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -66,7 +66,7 @@ export default function FormularioContacto() {
                 console.error('Error de red:', error);
             }
         }
-    };
+    }
 
     return (
         <div className="flex flex-col items-center mt-5">
@@ -80,7 +80,7 @@ export default function FormularioContacto() {
                             value={formData.nombre}
                             onChange={handleInputChange}
                             className={`text-black rounded-md ${errors.nombre && 'border-red-500'}`}
-                            placeholder="Ernesto"
+                            placeholder=" Ernesto"
                             required
                         />
                         {errors.nombre && <p className="text-red-500">{errors.nombre}</p>}
@@ -93,7 +93,7 @@ export default function FormularioContacto() {
                             value={formData.nombreEmpresa}
                             onChange={handleInputChange}
                             className={`text-black rounded-md ${errors.nombreEmpresa && 'border-red-500'}`}
-                            placeholder="RiseUp"
+                            placeholder=" RiseUp"
                             required
                         />
                         {errors.nombreEmpresa && <p className="text-red-500">{errors.nombreEmpresa}</p>}
@@ -105,7 +105,7 @@ export default function FormularioContacto() {
                             value={formData.telefono}
                             onChange={handleInputChange}
                             className={`text-black rounded-md ${errors.telefono && 'border-red-500'}`}
-                            placeholder="123-456-7890"
+                            placeholder=" 123-456-7890"
                         />
                         {errors.telefono && <p className="text-red-500">{errors.telefono}</p>}
                     </div>
@@ -117,7 +117,7 @@ export default function FormularioContacto() {
                             value={formData.email}
                             onChange={handleInputChange}
                             className={`text-black rounded-md ${errors.email && 'border-red-500'}`}
-                            placeholder="correo@correo.com"
+                            placeholder=" correo@correo.com"
                             required
                         />
                         {errors.email && <p className="text-red-500">{errors.email}</p>}
@@ -140,5 +140,5 @@ export default function FormularioContacto() {
                 </div>
             </form>
         </div>
-    );
+    )
 }

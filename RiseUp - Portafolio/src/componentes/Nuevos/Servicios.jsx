@@ -1,4 +1,4 @@
-import Tarjeta from "./TarjetaServicio";
+import Tarjeta from "./TarjetaServicio"
 
 export default function Servicios() {
   const TarjetaData = [
@@ -9,7 +9,7 @@ export default function Servicios() {
     { nombre: 'Terciarización de Herramientas', imagen: 'iconos svg/configuraciones.svg' },
     { nombre: 'Anuncios con IA', imagen: 'iconos svg/anuncio-publicitario.svg' },
     { nombre: 'Rebranding', imagen: 'iconos svg/branding.svg' },
-  ];
+  ]
 
   return (
     <div className="flex flex-col items-center mt-10">
@@ -23,5 +23,5 @@ export default function Servicios() {
         ))}
       </div>
     </div>
-  );
+  )
 }
