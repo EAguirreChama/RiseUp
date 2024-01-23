@@ -10,6 +10,7 @@ export default function FormularioContacto() {
     })
 
     const [errors, setErrors] = useState({})
+    const [mensaje, setMensaje] = useState('')
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -42,38 +43,61 @@ export default function FormularioContacto() {
             newErrors.telefono = 'Ingresa un número de teléfono válido';
         }
 
-        // Actualizar el estado de errores
         setErrors(newErrors);
 
-        // Enviar el formulario si no hay errores
         if (Object.keys(newErrors).length === 0) {
             try {
-                const response = await fetch('http://localhost:3001/enviar-correo', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData),
-                });
+                const response = await fetch('http://localhost:5173/formulario')
+                // , {
+                //     method: 'POST',
+                //     headers: {
+                //         'Content-Type': 'application/json',
+                //     },
+                //     body: JSON.stringify(formData),
+                // });
 
                 if (response.ok) {
                     console.log('Correo enviado con éxito');
-                    // Puedes redirigir a una página de confirmación o realizar otras acciones aquí
+                    setMensaje('Correo enviado correctamente')
+                    // setFormData({
+                    //     nombre: '',
+                    //     nombreEmpresa: '',
+                    //     telefono: '',
+                    //     email: '',
+                    //     descripcion: '',
+                    // })
                 } else {
+                    setMensaje('Error al enviar el correo')
                     console.error('Error al enviar el correo');
                 }
             } catch (error) {
                 console.error('Error de red:', error);
+                setMensaje('Error al enviar el correo')
             }
         }
     }
 
+    setTimeout(() => {
+        setMensaje('')
+    }, 3000)
+
     return (
         <div className="flex flex-col items-center mt-5">
-            <form className="rounded-3xl mt-10 border border-white px-10 py-8 text-white" onSubmit={handleSubmit}>
+            <div className="justify-center text-white text-center text-3xl md:text-4xl lg:text-4xl font-medium">
+                ¿Necesitas elevar tu <br /> presencia?
+            </div>
+            <div className="justify-center text-white text-center text-1xl mt-6 md:text-2xl lg:text-2xl font-medium">
+                Contanos sobre tu proyecto, para <br /> poder brindarte el mejor <br /> asesoramiento
+            </div>
+            <form className="rounded-3xl mt-6 border border-white px-10 py-8 text-white " onSubmit={handleSubmit}>
                 <div className="flex flex-col">
+                    {mensaje && (
+                        <div className={`bg-${mensaje.includes('correctamente') ? 'green' : 'red'}-600 mb-3 py-2 rounded-2xl text-center`}>
+                            {mensaje}
+                        </div>
+                    )}
                     <div className="flex flex-col">
-                        <label>Nombre:</label>
+                        <label>Nombre: <span className='text-red-600 font-bold'>*</span></label>
                         <input
                             type="text"
                             name="nombre"
@@ -86,7 +110,8 @@ export default function FormularioContacto() {
                         {errors.nombre && <p className="text-red-500">{errors.nombre}</p>}
                     </div>
                     <div className="flex flex-col mt-5">
-                        <label>Nombre de la Empresa:</label>
+                        <label>Nombre de la Empresa: <span className='text-red-600 font-bold'>*</span></label>
+                        <div></div>
                         <input
                             type="text"
                             name="nombreEmpresa"
@@ -110,7 +135,7 @@ export default function FormularioContacto() {
                         {errors.telefono && <p className="text-red-500">{errors.telefono}</p>}
                     </div>
                     <div className="flex flex-col mt-5">
-                        <label>Email:</label>
+                        <label>Email: <span className='text-red-600 font-bold'>*</span></label>
                         <input
                             type="text"
                             name="email"
@@ -134,11 +159,25 @@ export default function FormularioContacto() {
                         />
                     </div>
 
-                    <button type="submit" className="text-white text-2xl bg-green-600 font-medium py-2 rounded-2xl justify-center mt-8">
+                    <span className='text-red-600 font- mt-2'>* Campos Obligatorios</span>
+
+                    <button type="submit" className="text-white text-2xl bg-green-600 font-medium py-2 rounded-2xl justify-center mt-5">
                         Enviar
                     </button>
                 </div>
             </form>
+            <div>
+                <img src="logo Riseup/logo png.png" className="w-[100px] lg:w-[150px] mt-10" />
+            </div>
+            <div className="flex w-full lg:w-[220px] gap-4 sm:gap-5 px-2 sm:px-5 my-2 justify-center">
+                <img src="iconos svg/instagram (3).svg" className="w-10 h-10 lg:w-12 lg:h-12 cursor-pointer" />
+                <img src="iconos svg/linkedin.svg" className="w-10 h-10 lg:w-12 lg:h-12 cursor-pointer" />
+                <img src="iconos svg//facebook (2).svg" className="w-10 h-10 lg:w-12 lg:h-12 cursor-pointer" />
+            </div>
+            <div className="bg-zinc-300 w-[50%] h-0.5 mt-5" />
+            <div className="mt-6 text-white text-xl sm:text-2xl lg:text-2xl font-light">
+                Copyright © 2024 RiseUp inc.
+            </div>
         </div>
     )
 }
