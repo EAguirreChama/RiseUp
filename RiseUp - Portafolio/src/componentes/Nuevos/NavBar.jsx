@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 export default function NavBar() {
   const location = useLocation()
   const isHome = location.pathname === "/"
-  const isFormulario = location.pathname === "/formulario"
+  const isFormulario = location.pathname === "/enviar-correo"
 
   const [menuVisible, setMenuVisible] = useState(false)
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768)
@@ -56,7 +56,7 @@ export default function NavBar() {
           {isHome && (
             <>
               <Link
-                to="/formulario"
+                to="/enviar-correo"
                 className="text-white text-2xl cursor-pointer hover:text-yellow-300"
               >
                 Contacto

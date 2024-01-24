@@ -5,7 +5,7 @@ export default function Contacto() {
     <div className="flex flex-col items-center mt-10">
       <div className="bg-zinc-300 w-full h-0.5" />
       <h1 className="font-medium text-white text-center text-4xl sm:text-5xl lg:text-6xl my-8 sm:my-16">¿Necesitas elevar tu <br /> presencia?</h1>
-      <Link to="/formulario">
+      <Link to="/enviar-correo">
         <button className="text-white bg-green-600 px-8 sm:px-16 py-4 sm:py-6 w-full lg:w-[550px] rounded-3xl text-xl sm:text-2xl lg:text-4xl font-medium mb-4 sm:mb-6">
           Contactanos
         </button>

@@ -44,35 +44,35 @@ export default function FormularioContacto() {
         }
 
         setErrors(newErrors);
-
+        
         if (Object.keys(newErrors).length === 0) {
             try {
-                const response = await fetch('http://localhost:5173/formulario')
-                // , {
-                //     method: 'POST',
-                //     headers: {
-                //         'Content-Type': 'application/json',
-                //     },
-                //     body: JSON.stringify(formData),
-                // });
-
+                // console.log(formData);
+                const response = await fetch('http://localhost:5173/enviar-correo', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: formData,
+                });
+                // console.log(response);
                 if (response.ok) {
                     console.log('Correo enviado con éxito');
-                    setMensaje('Correo enviado correctamente')
-                    setFormData({
-                        nombre: '',
-                        nombreEmpresa: '',
-                        telefono: '',
-                        email: '',
-                        descripcion: '',
-                    })
-                } else {
-                    setMensaje('Error al enviar el correo')
-                    console.error('Error al enviar el correo');
-                }
-            } catch (error) {
-                console.error('Error de red:', error);
-                setMensaje('Error al enviar el correo')
+                    setMensaje('Correo enviado correctamente');
+                    // setFormData({
+                        //     nombre: '',
+                        //     nombreEmpresa: '',
+                        //     telefono: '',
+                        //     email: '',
+                        //     descripcion: '',
+                        // });
+                    } else {
+                        console.error('Error al enviar el correo');
+                        setMensaje('Error al enviar el correo');
+                    }
+                } catch (error) {
+                    console.error('Error de red:', error);
+                setMensaje('Error al enviar el correo');
             }
         }
     }

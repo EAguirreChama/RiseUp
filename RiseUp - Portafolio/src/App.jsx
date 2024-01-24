@@ -9,7 +9,7 @@ export default function App() {
       
       <Routes>
         <Route exact path="/" element={<Landing />} />
-        <Route exact path="/formulario" element={<FormularioContacto />} />
+        <Route exact path="/enviar-correo" element={<FormularioContacto />} />
       </Routes>
     </div>
   )
