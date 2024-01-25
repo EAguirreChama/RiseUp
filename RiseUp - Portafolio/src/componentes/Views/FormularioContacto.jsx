@@ -48,12 +48,12 @@ export default function FormularioContacto() {
         if (Object.keys(newErrors).length === 0) {
             try {
                 // console.log(formData);
-                const response = await fetch('http://localhost:5173/enviar-correo', {
+                const response = await fetch('http://localhost:3000/enviar-correo', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: formData,
+                    body: JSON.stringify(formData),
                 });
                 // console.log(response);
                 if (response.ok) {
