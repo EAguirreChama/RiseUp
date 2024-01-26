@@ -12,7 +12,7 @@ export default function Servicios() {
   ]
 
   return (
-    <div className="flex flex-col items-center mt-10">
+    <div className="flex flex-col items-center">
       <div className="bg-zinc-300 w-full h-0.5" />
       <div className="justify-center text-white text-center text-4xl md:text-5xl font-medium my-10">
         Servicios que ofrecemos
