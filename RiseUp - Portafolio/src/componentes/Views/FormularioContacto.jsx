@@ -1,6 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function FormularioContacto() {
+    useEffect(() => {
+        // Desplazar la página hacia arriba al renderizar el componente
+        window.scrollTo(0, 0);
+    }, []);
+
     const [formData, setFormData] = useState({
         nombre: '',
         nombreEmpresa: '',
@@ -59,13 +64,13 @@ export default function FormularioContacto() {
                 if (response.ok) {
                     console.log('Correo enviado con éxito');
                     setMensaje('Correo enviado correctamente');
-                    // setFormData({
-                        //     nombre: '',
-                        //     nombreEmpresa: '',
-                        //     telefono: '',
-                        //     email: '',
-                        //     descripcion: '',
-                        // });
+                    setFormData({
+                            nombre: '',
+                            nombreEmpresa: '',
+                            telefono: '',
+                            email: '',
+                            descripcion: '',
+                        });
                     } else {
                         console.error('Error al enviar el correo');
                         setMensaje('Error al enviar el correo');
@@ -160,8 +165,8 @@ export default function FormularioContacto() {
                     </div>
 
                     <span className='text-red-600 font- mt-2'>* Campos Obligatorios</span>
-
-                    <button type="submit" className="text-white text-2xl bg-green-600 font-medium py-2 rounded-2xl justify-center mt-5">
+                    
+                    <button type="submit" className="text-white text-2xl bg-green font-medium py-2 rounded-2xl justify-center mt-5">
                         Enviar
                     </button>
                 </div>

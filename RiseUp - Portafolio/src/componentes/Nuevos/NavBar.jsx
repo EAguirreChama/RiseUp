@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom"
 import { useState, useEffect } from "react"
+import './style.css'
 
 export default function NavBar() {
   const location = useLocation()
@@ -29,8 +30,8 @@ export default function NavBar() {
     <div className="bg-zinc-950 flex justify-between pr-5">
       <Link to="/">
         <img
-          src="logo Riseup/logo png.png"
-          className="aspect-[3] object-contain w-[200px] mt-1 cursor-pointer"
+          src="../../../dist/logo Riseup/logo2 png.png"
+          className="md:aspect-[4] aspect-[5] object-contain w-[200px] mt-1 cursor-pointer"
         />
       </Link>
 
@@ -57,13 +58,13 @@ export default function NavBar() {
             <>
               <Link
                 to="/enviar-correo"
-                className="text-white text-2xl cursor-pointer hover:text-yellow-300"
+                className="boton_styles md:mt-0" 
               >
                 Contacto
               </Link>
               <a
                 href="#quienesSomos"
-                className="text-white text-2xl cursor-pointer hover:text-yellow-300"
+                className="boton_styles"
               >
                 ¿Quiénes somos?
               </a>
@@ -72,7 +73,7 @@ export default function NavBar() {
           {isFormulario && (
             <Link
               to="/"
-              className="text-white text-2xl cursor-pointer hover:text-yellow-300"
+              className="boton_styles"
             >
               Home
             </Link>
