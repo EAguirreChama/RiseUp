@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+// import TemporaryDrawer from "./Toggle"
 
 export default function Contacto() {
 
@@ -7,8 +8,8 @@ export default function Contacto() {
       <div className="bg-zinc-300 w-full h-0.5" />
       <h1 className="font-medium text-white text-center text-4xl sm:text-5xl lg:text-6xl my-8">¿Necesitas elevar tu <br /> presencia?</h1>
       <Link to="/enviar-correo" className='self-center mb-4'>
-          <div id="fifth" className="buttonBox md:w-[500px] md:py-5 md:text-3xl">
-            <button>Contactanos</button>
+          <div id="fifth" className="buttonBox md:w-[500px]">
+            <button className="md:text-3xl md:py-3">Contactanos</button>
           </div>
         </Link>
       <div className="flex w-full lg:w-[220px] gap-4 sm:gap-5 px-2 sm:px-5 my-2 justify-center">
@@ -23,6 +24,7 @@ export default function Contacto() {
       <div className="mt-6 text-white text-xl sm:text-2xl lg:text-4xl font-light">
         Copyright © 2024 RiseUp inc.
       </div>
+      {/* <TemporaryDrawer/> */}
     </div>
   )
 }

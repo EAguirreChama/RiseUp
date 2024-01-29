@@ -17,8 +17,8 @@ export default function Principal() {
           Elevamos tu presencia, multiplicamos tus ventas
         </div>
         <Link to="/enviar-correo" className='mt-8 md:mt-16 self-center'>
-          <div id="fifth" className="buttonBox md:w-[500px] md:py-5 md:text-3xl">
-            <button>¡Subir de Nivel!</button>
+          <div id="fifth" className="buttonBox md:w-[500px]">
+            <button className='md:text-3xl md:py-3'>¡Subir de Nivel!</button>
           </div>
         </Link>
       </div>

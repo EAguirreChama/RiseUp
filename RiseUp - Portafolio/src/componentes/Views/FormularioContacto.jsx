@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import './enviar.css';
 
 export default function FormularioContacto() {
     useEffect(() => {
@@ -49,7 +50,7 @@ export default function FormularioContacto() {
         }
 
         setErrors(newErrors);
-        
+
         if (Object.keys(newErrors).length === 0) {
             try {
                 // console.log(formData);
@@ -65,18 +66,18 @@ export default function FormularioContacto() {
                     console.log('Correo enviado con éxito');
                     setMensaje('Correo enviado correctamente');
                     setFormData({
-                            nombre: '',
-                            nombreEmpresa: '',
-                            telefono: '',
-                            email: '',
-                            descripcion: '',
-                        });
-                    } else {
-                        console.error('Error al enviar el correo');
-                        setMensaje('Error al enviar el correo');
-                    }
-                } catch (error) {
-                    console.error('Error de red:', error);
+                        nombre: '',
+                        nombreEmpresa: '',
+                        telefono: '',
+                        email: '',
+                        descripcion: '',
+                    });
+                } else {
+                    console.error('Error al enviar el correo');
+                    setMensaje('Error al enviar el correo');
+                }
+            } catch (error) {
+                console.error('Error de red:', error);
                 setMensaje('Error al enviar el correo');
             }
         }
@@ -109,7 +110,7 @@ export default function FormularioContacto() {
                             value={formData.nombre}
                             onChange={handleInputChange}
                             className={`text-black rounded-md ${errors.nombre && 'border-red-500'}`}
-                            placeholder=" Ernesto"
+                            placeholder="  Ernesto"
                             required
                         />
                         {errors.nombre && <p className="text-red-500">{errors.nombre}</p>}
@@ -123,7 +124,7 @@ export default function FormularioContacto() {
                             value={formData.nombreEmpresa}
                             onChange={handleInputChange}
                             className={`text-black rounded-md ${errors.nombreEmpresa && 'border-red-500'}`}
-                            placeholder=" RiseUp"
+                            placeholder="  RiseUp"
                             required
                         />
                         {errors.nombreEmpresa && <p className="text-red-500">{errors.nombreEmpresa}</p>}
@@ -135,7 +136,7 @@ export default function FormularioContacto() {
                             value={formData.telefono}
                             onChange={handleInputChange}
                             className={`text-black rounded-md ${errors.telefono && 'border-red-500'}`}
-                            placeholder=" 123-456-7890"
+                            placeholder="  123-456-7890"
                         />
                         {errors.telefono && <p className="text-red-500">{errors.telefono}</p>}
                     </div>
@@ -147,7 +148,7 @@ export default function FormularioContacto() {
                             value={formData.email}
                             onChange={handleInputChange}
                             className={`text-black rounded-md ${errors.email && 'border-red-500'}`}
-                            placeholder=" correo@correo.com"
+                            placeholder="  correo@correo.com"
                             required
                         />
                         {errors.email && <p className="text-red-500">{errors.email}</p>}
@@ -164,10 +165,12 @@ export default function FormularioContacto() {
                         />
                     </div>
 
-                    <span className='text-red-600 font- mt-2'>* Campos Obligatorios</span>
-                    
-                    <button type="submit" className="text-white text-2xl bg-green font-medium py-2 rounded-2xl justify-center mt-5">
-                        Enviar
+                    <span className='text-red-600 mt-2'>* Campos Obligatorios</span>
+
+                    <button type='submit' className='mt-5 self-center'>
+                        <div id="fifth" className="buttonBox md:w-[400px]">
+                            <button>¡Subir de Nivel!</button>
+                        </div>
                     </button>
                 </div>
             </form>
