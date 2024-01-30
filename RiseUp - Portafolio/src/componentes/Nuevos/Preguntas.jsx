@@ -11,7 +11,7 @@ export default function Preguntas() {
             En <span className="text-white">RiseUp</span> fusionamos la creatividad del diseño con la excelencia en el desarrollo web. <br />  <br />Ofrecemos soluciones digitales que no solo son visualmente impactantes, sino también funcionales y efectivas.
           </div>
           <img
-            src="letras con fondo/up22.png"
+            src="Letras/Up.png"
             className="object-contain object-center overflow-x-auto grow w-full md:w-2/5 hidden md:block"
           />
         </div>
@@ -22,7 +22,7 @@ export default function Preguntas() {
         </h1>
         <div className="flex flex-col md:flex-row m-4 gap-1 items-center md:items-start">
           <img
-            src="letras con fondo/rise3.png"
+            src="Letras/Rise.png"
             className="object-contain object-center overflow-x-auto grow w-full md:w-2/5 hidden md:block md:mt-2"
           />
           <div className="w-full md:w-3/5 text-white text-lg md:text-4xl text-opacity-70 text-center md:text-right md:m-5">

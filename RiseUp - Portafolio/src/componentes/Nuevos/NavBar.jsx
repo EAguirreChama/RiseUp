@@ -37,7 +37,7 @@ export default function NavBar() {
     <div className="bg-zinc-950 flex justify-between pr-5">
       <Link to="/">
         <img
-          src="logo Riseup/logo png.png"
+          src="LogoRiseUp/Logo.png"
           className="md:aspect-[3] aspect-[5] object-contain w-[200px] mt-1 cursor-pointer"
         />
       </Link>

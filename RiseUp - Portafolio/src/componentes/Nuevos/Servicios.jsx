@@ -2,13 +2,13 @@ import Tarjeta from "./TarjetaServicio"
 
 export default function Servicios() {
   const TarjetaData = [
-    { nombre: 'Asistentes de IA Personalizados', imagen: 'iconos svg/ia.svg' },
-    { nombre: 'Diseño y Desarrollo de Páginas Web', imagen: 'iconos svg/desarrollo-web.svg' },
-    { nombre: 'Automatización de Procesos', imagen: 'iconos svg/procesando.svg' },
-    { nombre: 'Imagen en Redes Sociales', imagen: 'iconos svg/megafono.svg' },
-    { nombre: 'Terciarización de Herramientas', imagen: 'iconos svg/configuraciones.svg' },
-    { nombre: 'Anuncios con IA', imagen: 'iconos svg/anuncio-publicitario.svg' },
-    { nombre: 'Rebranding', imagen: 'iconos svg/branding.svg' },
+    { nombre: 'Asistentes de IA Personalizados', imagen: 'Iconos/Asistentes de IA Personalizados.svg' },
+    { nombre: 'Diseño y Desarrollo de Páginas Web', imagen: 'Iconos/Diseño y Desarrollo de Páginas Web.svg' },
+    { nombre: 'Automatización de Procesos', imagen: 'Iconos/Automatización de Procesos.svg' },
+    { nombre: 'Imagen en Redes Sociales', imagen: 'Iconos/Imagen en Redes Sociales.svg' },
+    { nombre: 'Terciarización de Herramientas', imagen: '/Iconos/Terciarización de Herramientas.svg' },
+    { nombre: 'Anuncios con IA', imagen: 'Iconos/Anuncios con IA.svg' },
+    { nombre: 'Rebranding', imagen: 'Iconos/Rebranding.svg' },
   ]
 
   return (
