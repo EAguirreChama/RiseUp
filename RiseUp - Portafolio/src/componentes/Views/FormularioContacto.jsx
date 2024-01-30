@@ -175,12 +175,12 @@ export default function FormularioContacto() {
                 </div>
             </form>
             <div>
-                <img src="logo Riseup/logo png.png" className="w-[100px] lg:w-[150px] mt-10" />
+                <img src="LogoRiseUp/Logo.png" className="w-[100px] lg:w-[150px] mt-10" />
             </div>
             <div className="flex w-full lg:w-[220px] gap-4 sm:gap-5 px-2 sm:px-5 my-2 justify-center">
-                <img src="iconos svg/instagram (3).svg" className="w-10 h-10 lg:w-12 lg:h-12 cursor-pointer" />
-                <img src="iconos svg/linkedin.svg" className="w-10 h-10 lg:w-12 lg:h-12 cursor-pointer" />
-                <img src="iconos svg//facebook (2).svg" className="w-10 h-10 lg:w-12 lg:h-12 cursor-pointer" />
+                <img src="Iconos/Instagram.svg" className="w-10 h-10 lg:w-12 lg:h-12 cursor-pointer" />
+                <img src="Iconos/LinkedIn.svg" className="w-10 h-10 lg:w-12 lg:h-12 cursor-pointer" />
+                <img src="Iconos/Facebook.svg" className="w-10 h-10 lg:w-12 lg:h-12 cursor-pointer" />
             </div>
             <div className="bg-zinc-300 w-[50%] h-0.5 mt-5" />
             <div className="mt-6 text-white text-xl sm:text-2xl lg:text-2xl font-light">

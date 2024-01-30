@@ -10,7 +10,7 @@ export default function Principal() {
       />
       <div className="relative flex w-full max-w-screen-lg flex-col mt-10 mb-20 mx-auto">
         <img
-          src="logo Riseup/logo png.png"
+          src="LogoRiseUp/Logo.png"
           className="aspect-[4] object-contain self-center"
         />
         <div className="justify-center text-white text-center text-3xl md:text-5xl lg:text-5xl font-medium">

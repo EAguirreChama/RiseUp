@@ -17,7 +17,7 @@ export default function Contacto() {
         <img src="Iconos/Facebook.svg" className="w-10 h-10 lg:w-12 lg:h-12 cursor-pointer" />
       </div>
       <a href="#inicio">
-        <img src="logo Riseup/logo png.png" className="w-[100px] lg:w-[150px]" />
+        <img src="LogoRiseUp/Logo.png" className="w-[100px] lg:w-[150px]" />
       </a>
       <div className="bg-zinc-300 w-full h-0.5" />
       <div className="mt-6 text-white text-xl sm:text-2xl lg:text-4xl font-light">
